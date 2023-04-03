@@ -294,7 +294,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
+
 .banner img {
+  animation: ellipse 6s linear infinite;
+}
+
+@keyframes ellipse {
+  0% {
+    transform: translateX(calc(100px * cos(0deg))) translateY(calc(50px * sin(0deg)));
+  }
+  25% {
+    transform: translateX(calc(100px * cos(90deg))) translateY(calc(50px * sin(90deg)));
+  }
+  50% {
+    transform: translateX(calc(100px * cos(180deg))) translateY(calc(50px * sin(180deg)));
+  }
+  75% {
+    transform: translateX(calc(100px * cos(270deg))) translateY(calc(50px * sin(270deg)));
+  }
+  100% {
+    transform: translateX(calc(100px * cos(360deg))) translateY(calc(50px * sin(360deg)));
+  }
+}
+
+/* .banner img {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+/* .banner img {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
@@ -310,7 +346,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
-}
+} */
 
 /************ Skills Css ************/
 .skill {
