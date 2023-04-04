@@ -1,3 +1,14 @@
+/* .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+} */
+
+/* #page-content {
+  width: 100%;
+} */
+
 /************ Custom Font ************/
 @font-face {
   font-family: Centra;
