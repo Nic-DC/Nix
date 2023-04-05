@@ -6,14 +6,20 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 const Banner = () => {
-  const toRotate = ["Full-Stack Developer", "Blockchain Enthuziast", "Prompt Engineer"];
+  const toRotate = [
+    "Full-Stack Developer",
+    "Blockchain Enthuziast",
+    "Neural Network Navigator",
+    "Unstoppable Learner",
+    "Diversity Dynamo",
+  ];
 
-  const period = 700;
+  const period = 200;
 
   const [loopNr, setLoopNr] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(150 - Math.random() * 100);
+  const [delta, setDelta] = useState(80 - Math.random() * 60);
 
   const tick = () => {
     let i = loopNr % toRotate.length;
@@ -66,11 +72,10 @@ const Banner = () => {
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                  </p>
+                  <blockquote className="blockquote">
+                    <p>Good software, like wine, takes time.</p>
+                    <footer className="blockquote-footer">Joel Spolsky</footer>
+                  </blockquote>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
