@@ -10,19 +10,19 @@ import TrackVisibility from "react-on-screen";
 const Projects = () => {
   const projects = [
     {
-      title: "Travel API",
-      description: "Geolocation",
-      imgUrl: projImg3,
+      title: "Real-Estate API",
+      description: "Search & Filter & List & Buy Properties",
+      imgUrl: projImg2,
     },
     {
       title: "Crypto API",
-      description: "Currencies & Exchanges",
-      imgUrl: projImg1,
+      description: "Currencies & Markets & Exchanges ",
+      imgUrl: projImg3,
     },
     {
-      title: "Real-Estate API",
-      description: "Filter & List & Buy",
-      imgUrl: projImg2,
+      title: "Travel & Geolocation API",
+      description: "Google Maps API, Google Location API",
+      imgUrl: projImg1,
     },
   ];
 
