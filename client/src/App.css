@@ -1,17 +1,17 @@
 /************ Custom Font ************/
 @font-face {
-  font-family: Centra;
-  src: url("./assets/font/CentraNo2-Bold.ttf");
+  font-family: Ubuntu;
+  src: url("./assets/font/Ubuntu-B.ttf");
   font-weight: 700;
 }
 @font-face {
-  font-family: Centra;
-  src: url("./assets/font/CentraNo2-Medium.ttf");
+  font-family: Ubuntu;
+  src: url("./assets/font/Ubuntu-M.ttf");
   font-weight: 500;
 }
 @font-face {
-  font-family: Centra;
-  src: url("./assets/font/CentraNo2-Book.ttf");
+  font-family: Ubuntu;
+  src: url("./assets/font/Ubuntu-L.ttf");
   font-weight: 400;
 }
 
@@ -294,7 +294,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
+
 .banner img {
+  animation: ellipse 6s linear infinite;
+}
+@keyframes ellipse {
+  0% {
+    transform: translateX(calc(100px * cos(0deg))) translateY(calc(50px * sin(0deg)));
+  }
+  25% {
+    transform: translateX(calc(100px * cos(90deg))) translateY(calc(50px * sin(90deg)));
+  }
+  50% {
+    transform: translateX(calc(100px * cos(180deg))) translateY(calc(50px * sin(180deg)));
+  }
+  75% {
+    transform: translateX(calc(100px * cos(270deg))) translateY(calc(50px * sin(270deg)));
+  }
+  100% {
+    transform: translateX(calc(100px * cos(360deg))) translateY(calc(50px * sin(360deg)));
+  }
+}
+
+/* .banner img {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
@@ -310,7 +332,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
-}
+} */
 
 /************ Skills Css ************/
 .skill {
