@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
 
 export const badRequestHandler = (err, req, res, next) => {
-  if (err.status === 400 || err instanceof mongoose.Error.ValidationError) {
+  if (
+    err.status === 400 ||
+    err instanceof mongoose.Error.ValidationError ||
+    (err.name === "MongoError" && err.code === 11000) // Handle duplicate key errors
+  ) {
     res.status(400).send({ message: err.message });
   } else if (err instanceof mongoose.Error.CastError) {
     res.status(400).send({ message: "You've sent a wrong _id in request params" });

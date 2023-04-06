@@ -9,6 +9,7 @@ const contactSchema = new Schema(
     email: { type: String, required: true },
     phone: { type: String, required: true },
     message: { type: String, required: false },
+    country: { type: String, required: true },
   },
   {
     timestamps: true,
