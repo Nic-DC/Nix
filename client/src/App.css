@@ -576,10 +576,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  padding: 60px 0 200px 0;
+  /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
+  background: linear-gradient(90.21deg, rgba(74, 47, 189, 0.8) -5.91%, rgba(0, 0, 0, 0.8) 111.58%);
+  padding: 60px 0 100px 0;
 }
 .contact img {
   width: 92%;
@@ -654,9 +655,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   background-image: url("./assets/img/footer-bg.png");
-  background-position: center center;
+  background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -684,7 +685,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
+  background: linear-gradient(90.21deg, rgba(74, 47, 189, 0.8) -5.91%, rgba(0, 0, 0, 0.8) 111.58%);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -713,7 +715,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
+  background: linear-gradient(90.21deg, rgba(74, 47, 189, 0.8) -5.91%, rgba(0, 0, 0, 0.8) 111.58%);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -729,4 +732,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+.footer #copyright {
+  font-weight: bold;
 }

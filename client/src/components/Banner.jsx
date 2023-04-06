@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-scroll";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import { useEffect, useState } from "react";
@@ -38,7 +39,6 @@ const Banner = () => {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNr(loopNr + 1);
-      // setDelta(500);
       setDelta(150 - Math.random() * 100);
     }
   };
@@ -61,7 +61,7 @@ const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my site</span>
+                  <span className="tagline">Welcome to my e-home</span>
                   <h1>
                     {/* {`Hi! I'm Nic`}{" "} */}
                     <span
@@ -76,9 +76,11 @@ const Banner = () => {
                     <p>Good software, like wine, takes time.</p>
                     <footer className="blockquote-footer">Joel Spolsky</footer>
                   </blockquote>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <Link to="contact" smooth={true} duration={200}>
+                    <button>
+                      Let’s Connect <ArrowRightCircle size={25} />
+                    </button>
+                  </Link>
                 </div>
               )}
             </TrackVisibility>
