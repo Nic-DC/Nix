@@ -25,8 +25,9 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const serverUrl = process.env.REACT_APP_BE_URL;
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:3013/contact", {
+    let response = await fetch(`${serverUrl}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
