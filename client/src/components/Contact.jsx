@@ -16,6 +16,9 @@ const Contact = () => {
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
 
+  const serverUrl = process.env.REACT_APP_BE_URL;
+  console.log("SERVER URL: ", serverUrl);
+
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -25,7 +28,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const serverUrl = process.env.REACT_APP_BE_URL;
+
     setButtonText("Sending...");
     let response = await fetch(`${serverUrl}/contact`, {
       method: "POST",
