@@ -5,6 +5,7 @@ import cors from "cors";
 import createHttpError from "http-errors";
 import contactRoutes from "./api/contact/contactRoutes.js";
 import { badRequestHandler, notFoundHandler, genericErrorHandler } from "./errorHandlers.js";
+import cleanBD_Router from "./api/cleanDB/cleanDB_Routes.js";
 
 const server = express();
 const { PORT, MONGO_URL, FE_DEV_URL, FE_PROD_URL } = process.env;
@@ -30,6 +31,7 @@ server.use(express.json());
 
 // ********************************** ROUTES ******************************************
 server.use("/contact", contactRoutes);
+server.use("/clean", cleanBD_Router);
 
 // ***************************** ERROR HANDLERS ***************************************
 server.use(badRequestHandler);
