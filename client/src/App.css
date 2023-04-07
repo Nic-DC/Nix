@@ -612,7 +612,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 767px) {
   .project blockquote p {
-    padding-right: 0;
+    margin-right: 0;
     margin-right: 0;
   }
 }
