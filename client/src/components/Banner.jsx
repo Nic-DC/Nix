@@ -78,7 +78,7 @@ const Banner = () => {
                   </blockquote>
                   <Link to="contact" smooth={true} duration={200}>
                     <button>
-                      Let’s Connect <ArrowRightCircle size={25} />
+                      Connect <ArrowRightCircle size={25} />
                     </button>
                   </Link>
                 </div>
