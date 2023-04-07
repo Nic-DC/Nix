@@ -351,6 +351,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner {
     padding-top: 175px; /* 75% of 260px */
   }
+  .banner h1 {
+    font-size: 44px; /* 80% of 55px */
+  }
 }
 
 /* .banner img {
