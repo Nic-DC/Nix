@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const formInitialDetails = {
@@ -42,15 +44,21 @@ const Contact = () => {
 
     setFormDetails(formInitialDetails);
 
+    // if (result.code === 200 || result.code === 201) {
+    //   setStatus({ success: true, message: "Message sent successfully" });
+    // } else {
+    //   setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
+    // }
     if (result.code === 200 || result.code === 201) {
-      setStatus({ success: true, message: "Message sent successfully" });
+      toast.success("Message sent successfully");
     } else {
-      setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
+      toast.error(result.message || "Something went wrong, please try again later.");
     }
   };
 
   return (
     <section className="contact" id="connect">
+      <ToastContainer position="bottom-right" />
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
