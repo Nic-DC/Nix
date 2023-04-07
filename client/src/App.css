@@ -349,7 +349,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 767px) {
   .banner {
-    padding-top: 195px; /* 75% of 260px */
+    padding-top: 175px; /* 75% of 260px */
   }
 }
 
