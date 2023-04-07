@@ -31,13 +31,8 @@ const NavBar = () => {
 
   return (
     <Router>
-      {/* <Navbar
+      <Navbar
         expand="md"
-        className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
-          scrolled ? "scrolled" : ""
-        }`}
-      > */}
-      <nav
         className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
           scrolled ? "scrolled" : ""
         }`}
@@ -55,12 +50,10 @@ const NavBar = () => {
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
 
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle> */}
-          <button className="navbar-toggler" type="button" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          </Navbar.Toggle>
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
@@ -105,8 +98,7 @@ const NavBar = () => {
             </span>
           </Navbar.Collapse>
         </Container>
-      </nav>
-      {/*</Navbar>*/}
+      </Navbar>
     </Router>
   );
 };

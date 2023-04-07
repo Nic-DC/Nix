@@ -101,6 +101,17 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
+
+nav.navbar.menu-open {
+  background-color: #121212;
+}
+
+nav.navbar.menu-open .navbar-nav .nav-link.navbar-link,
+nav.navbar.menu-open .social-icon a,
+nav.navbar.menu-open .navbar-text button {
+  opacity: 1;
+}
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
