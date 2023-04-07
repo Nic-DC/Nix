@@ -244,7 +244,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 768px) {
   nav.navbar a.navbar-brand {
-    width: 18%; /* 100% bigger than the original 9% */
+    width: 21%; /* 100% bigger than the original 9% */
   }
 }
 
@@ -345,6 +345,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
   margin-top: 10px;
   color: #b8b8b8;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 195px; /* 75% of 260px */
+  }
 }
 
 /* .banner img {
