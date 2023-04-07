@@ -31,12 +31,17 @@ const NavBar = () => {
 
   return (
     <Router>
-      {/* <Navbar expand="md" className={scrolled ? "scrolled" : ""}> */}
-      <nav
+      <Navbar
+        expand="md"
         className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
           scrolled ? "scrolled" : ""
         }`}
       >
+        {/*<nav
+        className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >*/}
         <Container>
           {/* <Navbar.Brand>
             <img src={logo} alt="Logo" /> */}
@@ -100,8 +105,8 @@ const NavBar = () => {
             </span>
           </Navbar.Collapse>
         </Container>
-      </nav>
-      {/* </Navbar> */}
+        {/*</nav>*/}
+      </Navbar>
     </Router>
   );
 };
