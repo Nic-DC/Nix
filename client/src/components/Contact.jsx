@@ -44,11 +44,6 @@ const Contact = () => {
 
     setFormDetails(formInitialDetails);
 
-    // if (result.code === 200 || result.code === 201) {
-    //   setStatus({ success: true, message: "Message sent successfully" });
-    // } else {
-    //   setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
-    // }
     if (result.code === 200 || result.code === 201) {
       toast.success("Message sent successfully", { className: "toastify-success" });
     } else {
@@ -122,11 +117,6 @@ const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      {/* {status.message && (
-                        <Col>
-                          <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                        </Col>
-                      )} */}
                     </Row>
                   </form>
                 </div>
