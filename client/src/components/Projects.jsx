@@ -52,16 +52,17 @@ const Projects = () => {
                         <Nav.Link eventKey="second">3D Apps</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Blockchain & AI</Nav.Link>
+                        <Nav.Link eventKey="third">DLT & AI</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content>
                       <Tab.Pane eventKey="first">
-                        <Row>
+                        <p>Coming soon...</p>
+                        {/* <Row>
                           {projects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
-                        </Row>
+                        </Row> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="section">
                         <blockquote className="blockquote">
