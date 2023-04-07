@@ -680,6 +680,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+.toastify-success {
+  background-color: rgba(74, 47, 189, 0.8) !important;
+  color: #fff !important;
+}
+
+.toastify-error {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #fff !important;
+}
+
 /************ Footer Css ************/
 .footer {
   padding: 50px 0 50px 0;

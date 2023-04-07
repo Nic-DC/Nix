@@ -50,9 +50,9 @@ const Contact = () => {
     //   setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
     // }
     if (result.code === 200 || result.code === 201) {
-      toast.success("Message sent successfully");
+      toast.success("Message sent successfully", { className: "toastify-success" });
     } else {
-      toast.error(result.message || "Something went wrong, please try again later.");
+      toast.error(result.message || "Something went wrong, please try again later.", { className: "toastify-error" });
     }
   };
 
