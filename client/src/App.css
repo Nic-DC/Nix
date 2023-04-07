@@ -451,8 +451,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 767px) {
-  .skill blockquote {
-    padding: 10px 5px;
+  .skill blockquote p {
+    width: 80%;
   }
 }
 
@@ -610,8 +610,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 767px) {
-  .project blockquote {
-    padding: 10px 5px;
+  .project blockquote p {
+    width: 80%;
   }
 }
 
