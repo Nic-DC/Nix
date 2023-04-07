@@ -22,7 +22,7 @@ const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="www.linkedin.com/in/dannicolaiecostea">
+              <a href="https://www.linkedin.com/in/dannicolaiecostea">
                 <img src={navIcon1} alt="linkedIn icon" />
               </a>
               {/* <a href="#">
