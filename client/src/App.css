@@ -102,16 +102,6 @@ nav.navbar {
   transition: 0.32s ease-in-out;
 }
 
-nav.navbar.menu-open {
-  background-color: #121212;
-}
-
-nav.navbar.menu-open .navbar-nav .nav-link.navbar-link,
-nav.navbar.menu-open .social-icon a,
-nav.navbar.menu-open .navbar-text button {
-  opacity: 1;
-}
-
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
@@ -131,6 +121,17 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
+
+/* nav.navbar.menu-open {
+  background-color: #121212;
+}
+
+nav.navbar.menu-open .navbar-nav .nav-link.navbar-link,
+nav.navbar.menu-open .social-icon a,
+nav.navbar.menu-open .navbar-text button {
+  opacity: 1;
+} */
+
 span.navbar-text {
   display: flex;
   align-items: center;
@@ -259,6 +260,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .navbar.menu-open {
     background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+nav.navbar.menu-open .navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Position the Connect button on the bottom left */
+nav.navbar.menu-open .navbar-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Style the Connect button on mobile */
+@media (max-width: 991px) {
+  nav.navbar.menu-open .navbar-text button {
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }
 
