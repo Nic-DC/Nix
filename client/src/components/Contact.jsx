@@ -16,7 +16,7 @@ const Contact = () => {
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
+  // const [status, setStatus] = useState({});
 
   const serverUrl = process.env.REACT_APP_BE_URL;
   console.log("SERVER URL: ", serverUrl);
@@ -122,11 +122,11 @@ const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      {status.message && (
+                      {/* {status.message && (
                         <Col>
                           <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
                         </Col>
-                      )}
+                      )} */}
                     </Row>
                   </form>
                 </div>
