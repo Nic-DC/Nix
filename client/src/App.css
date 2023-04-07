@@ -246,6 +246,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   nav.navbar a.navbar-brand {
     width: 21%; /* 100% bigger than the original 9% */
   }
+  .navbar.menu-open {
+    background: rgba(0, 0, 0, 0.9);
+  }
 }
 
 /************ Banner Css ************/

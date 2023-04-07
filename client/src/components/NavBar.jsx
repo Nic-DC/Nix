@@ -11,6 +11,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const onUpdateActiveLink = (value) => setActiveLink(value);
 
@@ -30,7 +31,12 @@ const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      {/* <Navbar expand="md" className={scrolled ? "scrolled" : ""}> */}
+      <nav
+        className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
         <Container>
           {/* <Navbar.Brand>
             <img src={logo} alt="Logo" /> */}
@@ -44,9 +50,12 @@ const NavBar = () => {
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
+          </Navbar.Toggle> */}
+          <button className="navbar-toggler" type="button" onClick={() => setMenuOpen(!menuOpen)}>
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
@@ -91,7 +100,8 @@ const NavBar = () => {
             </span>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </nav>
+      {/* </Navbar> */}
     </Router>
   );
 };
