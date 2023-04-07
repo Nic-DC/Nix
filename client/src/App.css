@@ -450,16 +450,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 10px;
 }
 
-@media (max-width: 767px) {
-  .skill-slider {
-    margin: 0 10px;
-  }
-  .skill blockquote p {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
@@ -611,16 +601,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   margin-top: 10px;
   color: #b8b8b8;
-}
-
-@media (max-width: 767px) {
-  .project .nav.nav-pills {
-    margin: 0 10px;
-  }
-  .project blockquote p {
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 
 /************ Contact Css ************/
