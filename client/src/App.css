@@ -453,7 +453,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media (max-width: 767px) {
   .skill blockquote p {
     margin-right: 0;
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -613,7 +613,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media (max-width: 767px) {
   .project blockquote p {
     margin-right: 0;
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
