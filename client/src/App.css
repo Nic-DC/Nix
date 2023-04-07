@@ -258,32 +258,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   nav.navbar a.navbar-brand {
     width: 21%; /* 100% bigger than the original 9% */
   }
-  .navbar.menu-open {
-    background: rgba(0, 0, 0, 0.9);
-  }
-}
-
-nav.navbar.menu-open .navbar-collapse {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  height: 100%;
-}
-
-/* Position the Connect button on the bottom left */
-nav.navbar.menu-open .navbar-text {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-/* Style the Connect button on mobile */
-@media (max-width: 991px) {
-  nav.navbar.menu-open .navbar-text button {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
 }
 
 /************ Banner Css ************/

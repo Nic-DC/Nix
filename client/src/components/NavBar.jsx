@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-scroll";
 import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
@@ -55,6 +55,50 @@ const NavBar = () => {
           </Navbar.Toggle>
 
           <Navbar.Collapse id="basic-navbar-nav">
+            <Row className="w-100">
+              <Col xs="auto" className="d-flex flex-column align-items-end">
+                <Nav className="ms-auto">
+                  <Nav.Link
+                    href="#home"
+                    className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
+                    onClick={() => onUpdateActiveLink("home")}
+                  >
+                    Home
+                  </Nav.Link>
+                  <Nav.Link
+                    href="#skills"
+                    className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
+                    onClick={() => onUpdateActiveLink("skills")}
+                  >
+                    Skills
+                  </Nav.Link>
+                  <Nav.Link
+                    href="#projects"
+                    className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+                    onClick={() => onUpdateActiveLink("projects")}
+                  >
+                    Projects
+                  </Nav.Link>
+                </Nav>
+              </Col>
+              <Col xs="auto" className="d-flex flex-column align-items-start">
+                <span className="navbar-text">
+                  <div className="social-icon">
+                    <a href="https://www.linkedin.com/in/dannicolaiecostea" target="_blank" rel="noreferrer">
+                      <img src={navIcon1} alt="linkedIn icon" />
+                    </a>
+                  </div>
+                  <HashLink to="#connect">
+                    <button className="vvd">
+                      <span>Connect</span>
+                    </button>
+                  </HashLink>
+                </span>
+              </Col>
+            </Row>
+          </Navbar.Collapse>
+
+          {/* <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
                 href="#home"
@@ -83,12 +127,7 @@ const NavBar = () => {
                 <a href="https://www.linkedin.com/in/dannicolaiecostea" target="_blank" rel="noreferrer">
                   <img src={navIcon1} alt="linkedIn icon" />
                 </a>
-                {/* <a href="#">
-                  <img src={navIcon2} alt="" />
-                </a>
-                <a href="#">
-                  <img src={navIcon3} alt="" />
-                </a> */}
+                
               </div>
               <HashLink to="#connect">
                 <button className="vvd">
@@ -96,7 +135,7 @@ const NavBar = () => {
                 </button>
               </HashLink>
             </span>
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
         </Container>
       </Navbar>
     </Router>
