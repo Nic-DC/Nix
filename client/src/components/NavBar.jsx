@@ -15,6 +15,22 @@ const NavBar = () => {
 
   const onUpdateActiveLink = (value) => setActiveLink(value);
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleDocumentClick = (event) => {
+    if (menuOpen) {
+      const targetElement = event.target;
+      const collapseElement = document.getElementById("basic-navbar-nav");
+      const togglerElement = document.querySelector(".navbar-toggler");
+
+      if (!collapseElement.contains(targetElement) && !togglerElement.contains(targetElement)) {
+        setMenuOpen(false);
+      }
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -23,11 +39,31 @@ const NavBar = () => {
         setScrolled(false);
       }
     };
+    // Add the event listener
+    document.addEventListener("click", handleDocumentClick);
     // ON MOUNT
     window.addEventListener("scroll", onScroll);
     // DISMOUNT
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      // Remove the event listener
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, [menuOpen]);
+
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     if (window.scrollY > 50) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
+  //   // ON MOUNT
+  //   window.addEventListener("scroll", onScroll);
+  //   // DISMOUNT
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
   return (
     <Router>
@@ -36,6 +72,7 @@ const NavBar = () => {
         className={`navbar navbar-expand-lg navbar-dark fixed-top ${menuOpen ? "menu-open" : ""} ${
           scrolled ? "scrolled" : ""
         }`}
+        expanded={menuOpen} // Add this line
       >
         <Container>
           {/* <Navbar.Brand>
@@ -50,11 +87,13 @@ const NavBar = () => {
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav"> */}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleMenuToggle}>
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
 
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className={menuOpen ? "navbar-collapse-open" : ""}>
+            {/* <Navbar.Collapse id="basic-navbar-nav"> */}
             <Nav className="ms-auto">
               <Nav.Link
                 href="#home"

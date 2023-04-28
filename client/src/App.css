@@ -254,6 +254,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+nav.navbar.menu-open .navbar-collapse {
+  background-color: #000;
+}
+
+nav.navbar .navbar-collapse.navbar-collapse-open {
+  background-color: #000;
+  margin-top: 1rem;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  padding: 0 25px 0.5rem; /* Add 0.5rem at the bottom */
+}
+
 @media (max-width: 768px) {
   nav.navbar a.navbar-brand {
     width: 21%; /* 100% bigger than the original 9% */
